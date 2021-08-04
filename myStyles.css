@@ -1,0 +1,151 @@
+body, html {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+.side-nav {
+    position: fixed;
+    width: 150px;
+    height: 100%;
+    background-color: #333;
+}
+.content {
+    margin-left: 150px;
+    height: auto;
+    width: auto;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.home {
+    padding: 24px 12px;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: auto;
+    position: relative;
+    box-shadow: 0px 0px 12px 12px grey;
+    border-bottom: 2px solid black;
+}
+.home h1 {
+    font-size: 6vw;
+    margin-bottom: 4px;
+}
+.home h3{
+    margin-top: 4px;
+    font-size: 1.5vw;
+}
+.main-image {
+    margin: auto;
+    align-self: center;
+}
+.side-nav nav img {
+    opacity: 0.5;
+    width: 150px;
+    height: auto;
+}
+.navButton{
+    height: 50px;
+    width: 100%;
+    background-color: #333;
+    border: 0px;
+    margin-left: 0px;
+    height: 75px;
+    width: 150px;
+    vertical-align: middle;
+    text-align: center;
+    display: table;
+    opacity: 0.5;
+}
+.navButton .navTitle{
+    vertical-align: middle;
+    color: white;
+    display: table-cell;
+    border-radius: 4px;
+}
+.navButton:hover {
+    background-color: black;
+    transition: 1s;
+    cursor: pointer;
+}
+.about {
+    text-align: center;
+    padding: 24px 12px;
+    background-color: #fff;
+    color: black;
+}
+.about h1{
+    font-size: 2vw;
+}
+.about-container {
+    padding: 20px 16px;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 75%;
+    height: auto;
+}
+.about-container p{
+    font-size: 1.4vw;
+    text-align:center;
+}
+.education{
+    margin-top: 0%;
+    padding: 0px;
+    padding-top:0px;
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    height: auto;
+    width: 80%;
+}
+.ed-row{
+    margin:0px;
+    padding: 20px 16px;
+    margin: 24px 12px;
+    border-radius: 6px;
+    width: auto;
+    display: flex;
+    flex-flow: row; 
+    flex: 1 1 auto;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+}
+.ed-data{
+    padding: 20px 10px;
+    border-radius: 6px;
+    width: 65%;
+    height: auto;
+    flex: 0 1 auto; 
+    font-size: 1vw;
+}
+.ed-grade{
+    width: 20%;
+    height: auto;
+    flex: 0 1 auto;
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: black;
+    color:white;
+    padding: 2%;
+}
+.ed-grade .obt{
+    font-size: 2.1vw; 
+    text-align: center;
+    margin-bottom: 0%;
+    padding: 0px;
+}
+.ed-grade .divide{
+    font-size: 1vw; 
+    text-align: center;
+    margin-top: 0%; 
+    margin-bottom: 10%;
+    padding: 0px;
+}
+.ed-grade .max{
+    font-size: 2.1vw; 
+    text-align: center;
+    margin-top: 10%;
+}
+
