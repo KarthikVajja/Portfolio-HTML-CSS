@@ -182,16 +182,16 @@ body, html {
     display: flex;
     flex-flow: row;
     padding: 20px 16px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 6px;
     width: 75%;
     height: 200px;
-    overflow: auto;
+    overflow: hidden;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 .work-ex .work-ex-row{
-    margin-left: 5%;
+    margin: 0% 5%;
     width: 30%;
     height: 100%;
     flex: 1 0 auto;
@@ -202,31 +202,32 @@ body, html {
     width: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 3s;
+    transition: 1s;
     border: 1px solid black;
+    display: flex;
+    flex-flow: column;
 }
 .work-ex .work-ex-row:hover .work-ex-card{
     transform: rotateY(180deg);
 }
-.work-ex .work-ex-row .work-ex-card .work-ex-img, .work-ex .work-ex-row .work-ex-card .work-ex-content{
+.work-ex .work-ex-row .work-ex-card .work-ex-front, .work-ex .work-ex-row .work-ex-card .work-ex-back{
     position: absolute;
-    top: 20%;
+    top: 50%;
     width: 100%;
     text-align: center;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.work-ex .work-ex-row .work-ex-card .work-ex-img{
+.work-ex .work-ex-row .work-ex-card .work-ex-front{
+    background-image: url(Amazon_\(company\)-Logo.wine.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    height: 100%;
+    border: 1px solid red;
     transform: translateY(-50%);
+    flex: 0 1 auto;
 }
-.work-ex .work-ex-row .work-ex-card .work-ex-content {
+.work-ex .work-ex-row .work-ex-card .work-ex-back {
     transform: translateY(-50%) rotateY(180deg);  
 }
-.work-ex .work-ex-row .work-ex-card .work-ex-img img{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 6rem;
-    height: auto;
-}
-
