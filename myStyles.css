@@ -182,7 +182,6 @@ body, html {
     display: flex;
     flex-flow: row;
     padding: 20px 16px;
-    /* border: 2px solid black; */
     border-radius: 6px;
     width: 75%;
     height: 200px;
@@ -199,8 +198,6 @@ body, html {
     flex: 1 0 auto;
     perspective: 1000px;
     text-align: center;
-    /* border: 1px solid gray; */
-    /* border-radius: 15px; */
 }
 .work-ex .work-ex-row .work-ex-card{
     height: 80%;
@@ -231,9 +228,14 @@ body, html {
     background-position: center;
     background-size:cover;
     height: 100%;
-    /* border: 1px solid red; */
     transform: translateY(-50%);
     flex: 0 1 auto;
+    position: relative;
+}
+.work-ex-front p{
+    position: absolute;
+    top: 75%;
+    width: 100%;
 }
 .work-ex .work-ex-row .work-ex-card .work-ex-back {
     transform: translateY(-50%) rotateY(180deg);  
@@ -291,4 +293,64 @@ body, html {
     height: auto;
     flex: 0 1 auto;
     padding: 6px 12px;
+}
+
+
+/* Project Styles */
+.projects{
+    display: flex;
+    flex-flow: column;
+    width: 75%;
+    height: auto;
+    padding: 20px 16px;
+}
+.project-row{
+    flex: 1 0 auto;
+    width: 96%;
+    height: auto;
+    margin: 2% 0%;
+}
+.project-card{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 100%;
+    height: 200px;
+    transition: 2s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    padding: 12px 20px;
+}
+.project-row:hover .project-card{
+    transform: rotateY(180deg)
+}
+.project-front, .project-back{
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.project-front{
+    display: flex;
+    flex-flow: row;
+}
+.project-data{
+    flex: 1 1 auto;
+    width: 80%;
+    height: 100%;
+    text-align: left;
+}
+.project-img{
+    flex: 1 0 auto;
+    width: 10%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.45);
+}
+.project-back{
+    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
 }
