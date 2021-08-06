@@ -187,25 +187,32 @@ body, html {
     width: 75%;
     height: 200px;
     overflow: hidden;
+    overflow-x: auto;
     flex-wrap: nowrap;
     justify-content: space-between;
 }
 .work-ex .work-ex-row{
     margin: 0% 5%;
-    width: 30%;
+    width: 25%;
     height: 100%;
+    padding: 8px 16px;
     flex: 1 0 auto;
     perspective: 1000px;
+    text-align: center;
+    /* border: 1px solid gray; */
+    /* border-radius: 15px; */
 }
 .work-ex .work-ex-row .work-ex-card{
-    height: 100%;
+    height: 80%;
     width: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: 1s;
-    border: 1px solid black;
+    transition: 1.5s;
     display: flex;
     flex-flow: column;
+    background-color: #d4d3d3;
+    border-radius: 15px;
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.45);
 }
 .work-ex .work-ex-row:hover .work-ex-card{
     transform: rotateY(180deg);
@@ -224,10 +231,64 @@ body, html {
     background-position: center;
     background-size:cover;
     height: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     transform: translateY(-50%);
     flex: 0 1 auto;
 }
 .work-ex .work-ex-row .work-ex-card .work-ex-back {
     transform: translateY(-50%) rotateY(180deg);  
+}
+
+
+/* Certification Styles */
+.cert{
+    text-align: left;
+    display: flex;
+    flex-flow: column;
+    padding: 1% 0%;
+    border: 2px solid black;
+    border-radius: 6px;
+    width: 75%;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.cert-row{
+    margin: 2% 5%;
+    flex: 1 0 auto;
+    height: 40%;
+    min-height: 100px;
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 6px 0px;
+    transition: 2s;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+}
+.cert-row:hover{
+    box-shadow: 0px 10px 5px rgba(0,0,0,0.45);
+}
+.cert-img{
+    flex: 0 1 auto;
+    width: 10%;
+    height: auto;
+    position: relative;
+}
+.cert-img img{
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+.cert-content{
+    width: 75%;
+    height: auto;
+    flex: 0 1 auto;
+    padding: 6px 12px;
 }
