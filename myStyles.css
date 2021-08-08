@@ -356,6 +356,8 @@ body, html {
     width: auto;
     height: auto;
     margin: 0% 0%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 .project-card{
     position: relative;
