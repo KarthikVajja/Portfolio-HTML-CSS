@@ -356,19 +356,20 @@ body, html {
     width: auto;
     height: auto;
     margin: 0% 0%;
+    perspective: 1000px;
 }
 .project-card{
     position: relative;
     border: 2px solid black;
     border-radius: 8px;
-    width: 100%;
+    width: auto;
     transition: 2s;
     transform-style: preserve-3d;
     padding: 20px 16px;
     margin: 24px 12px;
 }
 .project-row:hover .project-card{
-    transform: rotateY(180deg)
+    transform: rotateX(180deg)
 }
 .project-front, .project-back{
     height: 100%;
@@ -387,7 +388,7 @@ body, html {
     text-align: left;
 }
 .project-img{
-    flex: 1 0 auto;
+    flex: 0 1 auto;
     width: 10%;
     min-height: 100%;
     border: 2px solid black;
@@ -398,5 +399,69 @@ body, html {
     height: auto;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%) rotateY(180deg);
+    transform: translateY(-50%) rotateX(180deg);
 }
+
+
+/* Skills */
+.skills{
+    background-color: transparent;
+    color: #fff;
+    height: auto;
+    width: 75%;
+    display: block;
+    display: flex;
+    flex-flow: row;
+}
+.skills-row{
+    flex: 1 1 auto;
+    /* background-color: #333; */
+    border: 2px solid black;
+    padding: 24px 20px;
+    border-radius: 8px;
+    height: auto;
+    width: 100%;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 15px 10px rgba(0,0,0,0.5);  
+    display: flex;
+    flex-flow: row; 
+    justify-content: space-between;
+}
+.skills-entry{
+    background-color: #333;
+    border-radius: 8px;
+    flex: 0 1 auto;
+    width: 25%;
+    height: 60%;
+    padding: 10px 10px;
+}
+.skills-img{
+    margin-top: 0;
+    width: 3vw; /*  */
+    height: 1.5vh;
+}
+.skills-img .skills-hover{
+    background-color: #333;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.skills-hover::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-image: url('Capture-removebg-preview.png');
+    background-size: contain;
+    background-repeat: repeat-x;
+    transition: 1s ease-in-out;
+}
+.skills-row:hover .skills-entry .skills-img .skills-hover::after{
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
