@@ -4,7 +4,9 @@ body, html {
     font-family: sans-serif;
     /* z-index: -1; */
 }
-
+a{
+    text-decoration: none;
+}
 
 /* Side nav */
 .side-nav {
@@ -85,13 +87,15 @@ body, html {
     background-color: #fff;
     color: black;
 }
-.about h1{
+
+/* Text Hover effect */
+h1{
     font-size: 2vw;
 }
-.about h1 b{
+h1 b{
     position: relative;
 }
-.about h1 b::after{
+h1 b::after{
     content: '';
     position: absolute;
     right:0;
@@ -102,11 +106,12 @@ body, html {
     transition: 0.5s ease-in-out;
 
 } 
-.about h1 b:hover::after{
+h1 b:hover::after{
     right: auto;
     left:0;
     width: 100%;
 }
+
 .about-container {
     padding: 20px 16px;
     border: 2px solid black;
@@ -465,4 +470,50 @@ body, html {
     left: 0;
     width: 100%;
 }
+
+
+/* Photos */
+.photos{
+    width: 100%;
+    height: auto;
+    padding: 12px 0px;
+    text-align: center;
+}
+.photos-container{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.photo{
+    display: inline;
+    flex: 0 1 auto;
+    position: relative;
+    margin: 18px 26px;
+}
+.photo img{
+    height: 200px;
+    border-radius: 8px;
+    transition: 1s;
+}
+.photo-abs{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: #fff;
+    opacity:0;
+    transition: 1s;
+}
+.photo:hover .photo-abs{
+    opacity:1;
+    transition: 1s;
+}
+.photo:hover img{
+    opacity:0.5;
+    transition: 1s;
+}
+
 
