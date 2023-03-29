@@ -275,11 +275,10 @@ h1 b:hover::after{
     backface-visibility: hidden;
 }
 .work-ex .work-ex-row .work-ex-card .work-ex-front{
-    background-image: url(Amazon_\(company\)-Logo.wine.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;
-    height: 100%;
+    height: 8vw;
     transform: translateY(-50%);
     flex: 0 1 auto;
     position: relative;
@@ -406,6 +405,8 @@ h1 b:hover::after{
     position: absolute;
     top: 50%;
     transform: translateY(-50%) rotateX(180deg);
+    padding-right: 2vw;
+    text-align: left;
 }
 
 
@@ -442,9 +443,9 @@ h1 b:hover::after{
     height: 60%;
     padding: 10px 10px;
 }
-.skills-img{
+/* .skills-img{
     margin-top: 0;
-    width: 3vw; /*  */
+    width: 3vw; 
     height: 1.5vh;
 }
 .skills-img .skills-hover{
@@ -469,7 +470,7 @@ h1 b:hover::after{
     right: auto;
     left: 0;
     width: 100%;
-}
+} */
 
 
 /* Photos */
